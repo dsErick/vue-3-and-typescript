@@ -15,10 +15,10 @@ import { EventItem } from "../types";
 export default defineComponent({
   name: "HelloWorld",
   props: {
-      event: {
-          type: Object as PropType<EventItem>,
-          required: true,
-      }
+    event: {
+      type: Object as PropType<EventItem>,
+      required: true
+    }
   }
 });
 </script>
