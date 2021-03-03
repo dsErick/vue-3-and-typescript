@@ -10,8 +10,7 @@ interface Hero {
   activeAvenger: boolean;
   powers: string[];
   universe: ComicUniverse;
-};
-
+}
 
 const buttonStyle: ButtonType = "primary";
 const person: Hero = {
@@ -20,4 +19,4 @@ const person: Hero = {
   activeAvenger: false,
   powers: ["Rich", "Full-Tech Armor"],
   universe: "Marvel"
-}
+};
