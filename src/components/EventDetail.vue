@@ -9,29 +9,16 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent, PropType } from "vue";
 import { EventItem } from "../types";
-
-const event = {
-  id: 123,
-  category: "animal welfare",
-  title: "Cat Adoption Day",
-  description: "Find your new feline friend at this event.",
-  location: "Meow Town",
-  date: "January 28, 2022",
-  time: "12:00",
-  organizer: "Kat Laydee"
-};
 
 export default defineComponent({
   name: "HelloWorld",
-  data() {
-    return {
-      event: {} as EventItem // Type Assertion
-    };
-  },
-  mounted() {
-    this.event = event
+  props: {
+      event: {
+          type: Object as PropType<EventItem>,
+          required: true,
+      }
   }
 });
 </script>
@@ -43,7 +30,7 @@ export default defineComponent({
   padding: 20px;
   cursor: pointer;
   border: 1px solid #39495c;
-  margin-bottom: 18px;
+  margin: 18px 0;
 }
 .event-card:hover {
   transform: scale(1.01);
