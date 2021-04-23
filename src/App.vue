@@ -1,18 +1,24 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png" />
 
-  <events />
+  <div style="display: none">
+    <v-events />
+  </div>
+
+  <v-todos />
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
 
-import Events from './components/Events.vue';
+import VEvents from './components/Events.vue';
+import VTodos from './components/Todos.vue';
 
 export default defineComponent({
   name: "App",
   components: {
-    Events,
+    VEvents,
+    VTodos,
   }
 });
 </script>
